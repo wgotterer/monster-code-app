@@ -11,3 +11,26 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.header{
+  text-align: center;
+}
+
+.monster{
+  position: absolute;
+right: 0px;
+bottom: 200px;
+}
+
+.user_img{
+  position: absolute;
+  left: 0px;
+  bottom: 200px;
+}
+
+.user_img_2{
+  position: absolute;
+  left: 500px;
+  bottom: 200px;
+  opacity: 0.2;
+}
