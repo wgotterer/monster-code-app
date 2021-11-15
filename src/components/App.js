@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import {Route, Routes} from 'react-router-dom'
 import React from 'react'
 import NavBar from './NavBar'
-import AvatarCard from './AvatarCard';
+// import AvatarCard from './AvatarCard';
 import UserContainer from './UserContainer';
 import { Container } from 'semantic-ui-react';
 
@@ -11,7 +11,7 @@ import { Container } from 'semantic-ui-react';
 
 function App() {
   const [allAvatars, setAllAvatars] = useState([])
-  const [allMonsters, setAllMonsters] = useState([])
+  // const [allMonsters, setAllMonsters] = useState([])
 
   useEffect(() => {
     fetch('http://localhost:9292/avatars')

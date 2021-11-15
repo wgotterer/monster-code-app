@@ -1,19 +1,15 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import Select from 'react-select';
-import AvatarCard from './AvatarCard'
 
-
-
-
-function NavBar () {
+function NavBar() {
   return (
-    <div className="nav">
-      <h1>NavBar</h1>
-      
+    <div className='navbar'>
+        <NavLink to='/'>Login </NavLink>
+        <br/>
+        {/* <NavLink to='/game'>Game </NavLink>
+        <br/> */}
     </div>
   );
 }
-
 
 export default NavBar;
