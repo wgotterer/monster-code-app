@@ -5,18 +5,12 @@ import AvatarCard from './AvatarCard'
 
 
 
-const user = [
-    { value: 'jesse', label: 'Jesse' },
-    { value: 'leo', label: 'Leo' },
-    { value: 'william', label: 'William' }
-]
-function NavBar ({allAvatars}) {
+
+function NavBar () {
   return (
     <div className="nav">
       <h1>NavBar</h1>
-      <h3>Select your user:</h3>
-      <Select options={user} />
-      <h3>Select Your Avatar</h3>
+      
     </div>
   );
 }
