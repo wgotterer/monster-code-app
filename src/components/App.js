@@ -29,7 +29,7 @@ useEffect(() => {
 
 <div className="App">
       <NavBar />
-      <UserContainer allAvatars={allAvatars} />
+      <UserContainer allAvatars={allAvatars}/>
       <Routes>
         <Route path="/"> </Route>
         <Route path="/"> </Route>
