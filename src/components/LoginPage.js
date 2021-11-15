@@ -22,7 +22,7 @@ function LoginPage() {
     return (
         <div>
             <NewUserContainer allAvatars={allAvatars}/>
-
+            {/* returning user STRETCH GOALS */}
 
         </div>
     )
