@@ -6,8 +6,10 @@ function NavBar() {
     <div className='navbar'>
         <NavLink to='/'>Login </NavLink>
         <br/>
-        {/* <NavLink to='/game'>Game </NavLink>
-        <br/> */}
+        <NavLink to='/level'>Levels </NavLink>
+        <br/>
+        <NavLink to='/score'>Scores </NavLink>
+        <br/>
     </div>
   );
 }

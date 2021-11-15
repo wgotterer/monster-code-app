@@ -3,9 +3,9 @@ import AvatarCard from './AvatarCard'
 import { Card } from "semantic-ui-react";
 
 
-function UserContainer({allAvatars}){
+function NewUserContainer({allAvatars}){
     // console.log(allAvatars)
-
+    const [userInfo, setUserInfo] = useState({})
     const [formData, setFormData] = useState({
         name: "",
         avatar_id: ""
@@ -57,4 +57,4 @@ function UserContainer({allAvatars}){
     )
 }
 
-export default UserContainer
+export default NewUserContainer
