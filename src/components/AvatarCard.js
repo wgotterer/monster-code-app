@@ -1,23 +1,20 @@
 import React, { useState } from "react";
 // import { Card } from "semantic-ui-react";
 
-function AvatarCard({avatar}){
-
-    return(
-       
-        <div className="avatar-card">
-            <div className="image">
-                <img src={avatar.image_url} alt="test" height="50px" width="50px"/>
-            </div>
-            <div className="content">
-                <div className="header">{avatar.name}</div>
-                <div className="extra content"><span>Blah blah</span></div>
-            </div>
-            </div>
-            
+function AvatarCard({avatar, handleImageClick}){
 
 
-    )
+    return (
+        <Card>
+          <div>
+            <div className="header">{avatar.name}</div>
+            <div className="image" >
+              <img alt="oh no!" src={avatar.image_url} height="100px" onClick={() => {handleImageClick(avatar.id)}}/>
+            </div>
+          </div>
+        </Card>
+      );
+    
 }
 
 export default AvatarCard

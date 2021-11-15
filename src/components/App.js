@@ -4,6 +4,7 @@ import React from 'react'
 import NavBar from './NavBar'
 import AvatarCard from './AvatarCard';
 import UserContainer from './UserContainer';
+import { Container } from 'semantic-ui-react';
 
 
 
@@ -16,27 +17,29 @@ function App() {
     fetch('http://localhost:9292/avatars')
     .then(res => res.json())
     .then(data => setAllAvatars(data))
-}, []);
+  }, []);
 
-useEffect(() => {
-  fetch('http://localhost:9292/monsters')
-  .then(res => res.json())
-  .then(data => setAllMonsters(data))
-}, []);
+  // useEffect(() => {
+  //   fetch('http://localhost:9292/monsters')
+  //   .then(res => res.json())
+  //   .then(data => setAllMonsters(data))
+  // }, []);
 
+  
 
   return (
 
-<div className="App">
-      <NavBar />
-      <UserContainer allAvatars={allAvatars}/>
-      <Routes>
-        <Route path="/"> </Route>
-        <Route path="/"> </Route>
-        <Route exact path="/"></Route>
-      </Routes>
-    </div>
-
+    <Container>
+      <div className="App">
+        <NavBar />
+        <UserContainer allAvatars={allAvatars}/>
+        <Routes>
+          <Route path="/"> </Route>
+          <Route path="/"> </Route>
+          <Route exact path="/"></Route>
+        </Routes>
+      </div>
+    </Container>
 
     // <>
     // <div className="header">
