@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import Select from 'react-select-plus';
+import Select from 'react-select';
 import AvatarCard from './AvatarCard'
 
 

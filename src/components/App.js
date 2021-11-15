@@ -12,17 +12,17 @@ function App() {
   const [allAvatars, setAllAvatars] = useState([])
   const [allMonsters, setAllMonsters] = useState([])
 
-  useEffect(() => {
-    fetch('http://localhost:9292/avatars')
-    .then(res => res.json())
-    .then(data => setAllAvatars(data))
-}, []);
+//   useEffect(() => {
+//     fetch('http://localhost:9292/avatars')
+//     .then(res => res.json())
+//     .then(data => setAllAvatars(data))
+// }, []);
 
-useEffect(() => {
-  fetch('http://localhost:9292/monsters')
-  .then(res => res.json())
-  .then(data => setAllMonsters(data))
-}, []);
+// useEffect(() => {
+//   fetch('http://localhost:9292/monsters')
+//   .then(res => res.json())
+//   .then(data => setAllMonsters(data))
+// }, []);
 
 
   return (
