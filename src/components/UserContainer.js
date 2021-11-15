@@ -1,5 +1,5 @@
 
-function UserContainer(){
+function UserContainer({}){
 return(
     <div className="UserContainer">
             <h1>User Container</h1>
