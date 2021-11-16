@@ -35,7 +35,7 @@ return user && level ?
             <h2>{level["name"]}</h2>
             <form>
             {level["questions"][0]["question"]}
-            <input value={e.target.value} placeholder="answer"/>
+            <input placeholder="answer"/>
             <button>submit</button>
             </form>
             <h3>{user["name"]} The {user["avatar"]["name"]}</h3>
