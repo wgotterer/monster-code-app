@@ -1,8 +1,9 @@
-import React, { useState } from "react";
-// import { Card } from "semantic-ui-react";
+// import React, { useState } from "react";
+import { Card } from "semantic-ui-react";
 
 function AvatarCard({avatar, handleImageClick}){
-
+ pull
+ 
 
     return (
         <Card>
