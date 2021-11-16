@@ -1,9 +1,12 @@
 import React, {useEffect, useState} from 'react'
+import QuestionCard from './QuestionCard'
 
 function LevelPage() {
 
     const [user, setUser] = useState()
     const [level, setLevel] = useState()
+    const [levelNum, setLevelNum] = useState(1)
+    // const [loadNewLevel, setLoadNewLevel] = useState()
     // const [showLevel, setShowLevel] = (true)
     // const [isLoaded, setIsLoaded] = useState(false)
 
@@ -17,32 +20,39 @@ function LevelPage() {
     }, [])
 
     useEffect(() => {
-       fetch("http://localhost:9292/levels/questions/1")
+       fetch(`http://localhost:9292/levels/questions/${levelNum}`)
        .then((resp)=>resp.json())
        .then((levelData)=>{
            setLevel(levelData)
-        //    setIsLoaded(true)
+           // setIsLoaded(true)
         })
-    }, [])
+    }, [levelNum])
 
     // function handleLevelClick(){
     //     setShowLevel(!showLevel)
     // }
-   
-return user && level ? 
-     (
+    
+    const updateLevel = () => {
+        console.log("level updated!")
+        if(levelNum === 5){
+            alert("big W!")
+            setLevelNum(1)
+        }
+        else{
+            setLevelNum(levelNum + 1)
+            // setLoadNewLevel(levelNum)
+        }
+    }
+
+    return user && level ?
+        (
         <div>
             <h2>{level["name"]}</h2>
-            <form>
-            {level["questions"][0]["question"]}
-            <input placeholder="answer"/>
-            <button>submit</button>
-            </form>
+            <QuestionCard level={level} user={user} updateLevel={updateLevel}/>
             <h3>{user["name"]} The {user["avatar"]["name"]}</h3>
             <img src={user["avatar"]["image_url"]} height="200" width="200"/>
         </div>
-    )
-    : "Loading"
+        ) : "Loading"
 }
 
 
