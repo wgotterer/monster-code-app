@@ -1,8 +1,10 @@
 import React, {useEffect, useState} from 'react'
 import QuestionCard from './QuestionCard'
+import { useHistory } from "react-router-dom";
 
 function LevelPage() {
 
+    let history = useHistory();
     const [user, setUser] = useState()
     const [level, setLevel] = useState()
     const [levelNum, setLevelNum] = useState(1)
@@ -46,12 +48,30 @@ function LevelPage() {
         if(levelNum === 5){
             alert("big W!")
             setLevelNum(1)
+            history.push("/score")
+        
+            
         }
         else{
             setLevelNum(levelNum + 1)
+
+            fetch("http://localhost:9292/users/last", {
+                method: "PATCH",
+                 headers: {
+                 "Content-Type": "application/json",
+            },
+                body: JSON.stringify({
+                 level_id: levelNum
+      }),
+    })
+      .then((r) => r.json())
+      .then((updatedLevel) => console.log(updatedLevel));
             // setLoadNewLevel(levelNum)
+            // ################################## Make a patch request to add the monster image urls to user (in new columns?) then fetch for all users in ScorePage?
         }
     }
+
+
     return user && level && monster?
         (
         <div>
