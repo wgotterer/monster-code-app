@@ -1,14 +1,18 @@
 import React, {useState} from "react";
 import AvatarCard from './AvatarCard'
-// import { Card } from "semantic-ui-react";
+import { Card } from "semantic-ui-react";
+import { useHistory } from "react-router-dom";
 
 
-function UserContainer({allAvatars}){
+function NewUserContainer({allAvatars}){
+
+    let history = useHistory();
     // console.log(allAvatars)
-
+    const [userInfo, setUserInfo] = useState({})
     const [formData, setFormData] = useState({
         name: "",
-        avatar_id: ""
+        avatar_id: "",
+        level_id: 1
     })
     const [avatarId, setAvatarId] = useState(0)
 
@@ -16,7 +20,8 @@ function UserContainer({allAvatars}){
         e.preventDefault()
         const newUser = {
             name: formData.name,
-            avatar_id: avatarId
+            avatar_id: avatarId,
+            level_id: 1
         };
         console.log(newUser)
         fetch("http://localhost:9292/users", {
@@ -30,7 +35,10 @@ function UserContainer({allAvatars}){
             .then(data => {
               console.log(data);
             })
+            history.push("/level")
     }
+
+  
 
     const handleFormChange = (e) => {
         setFormData(currentFormData => Object.assign({...currentFormData}, {[e.target.name]:e.target.value}))
@@ -57,4 +65,4 @@ function UserContainer({allAvatars}){
     )
 }
 
-export default UserContainer
+export default NewUserContainer

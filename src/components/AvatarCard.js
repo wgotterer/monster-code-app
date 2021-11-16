@@ -2,8 +2,7 @@
 import { Card } from "semantic-ui-react";
 
 function AvatarCard({avatar, handleImageClick}){
- pull
- 
+
 
     return (
         <Card>
