@@ -23,7 +23,7 @@ function ScorePage() {
 
     return userList && monsterList ?
      (
-        <div>
+        <div className="usercontainer">
             haha high scores
             {userList.map((user)=><ScoreCard monsterList={monsterList} user={user}/>)}
         </div>

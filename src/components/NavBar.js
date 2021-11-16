@@ -4,12 +4,10 @@ import { NavLink } from "react-router-dom";
 function NavBar() {
   return (
     <div className='navbar'>
+        <h1>Our Coding Game</h1>
         <NavLink to='/'>Login </NavLink>
-        <br/>
-        <NavLink to='/level'>Levels </NavLink>
-        <br/>
+        <NavLink to='/level'>Levels </NavLink>       
         <NavLink to='/score'>Scores </NavLink>
-        <br/>
     </div>
   );
 }

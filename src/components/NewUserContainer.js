@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import AvatarCard from './AvatarCard'
-import { Card } from "semantic-ui-react";
+import { Button, Form, Card, Icon, Image } from "semantic-ui-react";
 import { useHistory } from "react-router-dom";
 
 
@@ -49,15 +49,16 @@ function NewUserContainer({allAvatars}){
     }
 
     return(
-        <div className="UserContainer">
+        <div className="usercontainer">
             
             <h1>User Container</h1>
-            <h3>Select your user:</h3>
-            <form>
-                <input type = "text" placeholder="username" name="name" value={formData.name} onChange={handleFormChange}/>
-                <button onClick= {submitUser}>submit</button>
-            </form>
-            <h3>Select Your Avatar</h3>
+            <h3>Select Your User:</h3>
+            <Form>
+                <Form.Field><label>Name</label><input type = "text" placeholder="username" name="name" value={formData.name} onChange={handleFormChange}/>
+                </Form.Field>
+                <Button onClick= {submitUser}>Submit</Button>
+            </Form>
+            <h3>Select Your Avatar:</h3>
             <Card.Group itemsPerRow={5}>
                 {allAvatars.map(avatar => <AvatarCard avatar={avatar} key={avatar.id} handleImageClick={handleImageClick}/>)}
             </Card.Group>
