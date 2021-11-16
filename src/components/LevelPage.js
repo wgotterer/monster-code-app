@@ -36,6 +36,7 @@ function LevelPage() {
         console.log("level updated!")
         if(levelNum === 5){
             alert("big W!")
+            setLevelNum(1)
         }
         else{
             setLevelNum(levelNum + 1)
