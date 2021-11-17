@@ -8,7 +8,7 @@ function ScorePage() {
 
     useEffect(() => {
         
-        fetch("http://localhost:9292/users")
+        fetch("http://localhost:9292/users/ordered")
             .then((resp)=>resp.json())
             .then((allUsers)=> setUserList(allUsers))
 

@@ -17,7 +17,7 @@ function QuestionCard({level, monster, user, updateLevel}) {
         }
         else if(formData === level["questions"][questionNum]["answer"]){
             setQuestionNum(questionNum + 1)
-            console.log(questionNum)
+            // console.log(questionNum)
         }
         setFormData("")
     }

@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import { Button, Form, Card, Icon, Image } from "semantic-ui-react";
+// import { Button, Form, Card, Icon, Image } from "semantic-ui-react";
 
  function ScoreCard({user, monsterList}) {
 
@@ -19,11 +19,6 @@ import { Button, Form, Card, Icon, Image } from "semantic-ui-react";
        const monsterImage =  userMonsters.map((monster)=><img src={monster.image_url} height="60" width="60"/>)
 
     
-    
-
-
-
-
     return  (
         <div>
             <h3>{user.name}</h3>{monsterImage} 
