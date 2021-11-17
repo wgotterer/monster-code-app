@@ -8,7 +8,7 @@ function ScorePage() {
 
     useEffect(() => {
         
-        fetch("http://localhost:9292/users")
+        fetch("http://localhost:9292/users/ordered")
             .then((resp)=>resp.json())
             .then((allUsers)=> setUserList(allUsers))
 
@@ -24,7 +24,7 @@ function ScorePage() {
     return userList && monsterList ?
      (
         <div className="scorecontainer">
-            <h1>haha high scores</h1>
+            <h1>HIGH SCORES</h1>
             {userList.map((user)=><ScoreCard monsterList={monsterList} user={user}/>)}
         </div>
     )
