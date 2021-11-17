@@ -45,30 +45,23 @@ function LevelPage() {
     // }
     
     const updateLevel = () => {
-        console.log("level updated!")
+        fetch("http://localhost:9292/users/last", {
+            method: "PATCH",
+                headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                level_id: (levelNum)
+            }),
+        })
         if(levelNum === 5){
             alert("big W!")
-            setLevelNum(1)
+            // setLevelNum(1)
             history.push("/score")
-        
-            
         }
         else{
             setLevelNum(levelNum + 1)
-
-            fetch("http://localhost:9292/users/last", {
-                method: "PATCH",
-                 headers: {
-                 "Content-Type": "application/json",
-            },
-                body: JSON.stringify({
-                 level_id: levelNum
-      }),
-    })
-      .then((r) => r.json())
-      .then((updatedLevel) => console.log(updatedLevel));
-            // setLoadNewLevel(levelNum)
-            // ################################## Make a patch request to add the monster image urls to user (in new columns?) then fetch for all users in ScorePage?
+            alert("next level!")
         }
     }
 

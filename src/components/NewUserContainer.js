@@ -11,12 +11,16 @@ function NewUserContainer({allAvatars}){
     const [userInfo, setUserInfo] = useState({})
     const [formData, setFormData] = useState({
         name: "",
-        avatar_id: "",
-        level_id: 1
+        // avatar_id: "",
+        // level_id: 1
     })
     const [avatarId, setAvatarId] = useState(0)
 
     const submitUser = (e) => {
+        if(avatarId===0 || !formData.name){
+            alert("please type a name and choose an avatar below!")
+            return;
+        }
         e.preventDefault()
         const newUser = {
             name: formData.name,

@@ -13,7 +13,6 @@ function QuestionCard({level, monster, user, updateLevel}) {
         console.log(formData)
         if(questionNum === 2 && formData === level["questions"][questionNum]["answer"]){
             updateLevel()
-            alert("Next Level!")
             setQuestionNum(0)
         }
         else if(formData === level["questions"][questionNum]["answer"]){

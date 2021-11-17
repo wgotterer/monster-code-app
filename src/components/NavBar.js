@@ -6,7 +6,7 @@ function NavBar() {
     <div className='navbar'>
         <h2>Our Coding Game - Answer Questions To Fight And Collect Monsters</h2>
         <NavLink to='/'>Login </NavLink>
-        <NavLink to='/level'>Levels </NavLink>       
+        {/* <NavLink to='/level'>Levels </NavLink>        */}
         <NavLink to='/score'>Scores </NavLink>
         
     </div>
