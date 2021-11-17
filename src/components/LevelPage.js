@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react'
+import {Grid, Image} from 'semantic-ui-react'
 import QuestionCard from './QuestionCard'
 import { useHistory } from "react-router-dom";
 
@@ -74,14 +75,10 @@ function LevelPage() {
 
     return user && level && monster?
         (
-        <div>
+        <div className="gamecontainer">
             <h2>{level["name"]}</h2>
-            <QuestionCard level={level} user={user} updateLevel={updateLevel}/>
-            <h3>{user["name"]} the {user["avatar"]["name"]}</h3>
-            <img src={user["avatar"]["image_url"]} height="200" width="200"/>
+            <QuestionCard level={level} monster={monster} user={user} updateLevel={updateLevel}/>
 
-            <h3>{monster["monsters"][0]["name"]} the Monster</h3>
-            <img src={monster["monsters"][0]["image_url"]} height="200" width="200"/>
         </div>
         ) : "Loading"
 }
