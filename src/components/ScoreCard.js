@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import { Button, Form, Card, Icon, Image } from "semantic-ui-react";
 
  function ScoreCard({user, monsterList}) {
 
@@ -15,7 +16,7 @@ import React, {useState} from 'react'
         // }
         // console.log(monsterList)
 
-       const monsterImage =  userMonsters.map((monster)=><img src={monster.image_url} height="50" width="50"/>)
+       const monsterImage =  userMonsters.map((monster)=><img src={monster.image_url} height="60" width="60"/>)
 
     
     
@@ -25,8 +26,7 @@ import React, {useState} from 'react'
 
     return  (
         <div>
-            <h3 >{user.name}</h3>
-            {monsterImage}
+            <h3>{user.name}</h3>{monsterImage} 
         </div>
     )
 }
