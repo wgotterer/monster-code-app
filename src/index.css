@@ -10,7 +10,7 @@
 .navbar {
   padding: 10px;
   display: flex;
-  background-color: rgba(120, 175, 163, 0.849);
+  background-color: #206d77 ;
   align-items: center;
   /* max-width: 600px; */
   margin: 0 auto;
@@ -27,7 +27,7 @@
   margin-left: 16px;
   text-decoration: underline;
   padding: 6px;
-  color:#f1356d;
+  color:#cfd4fc;
 }
 .navbar a:hover {
   color: #ffffff;
@@ -36,14 +36,14 @@
   max-width: 600px;
   margin: 40px auto;
   padding: 20px;
-  background-color: rgba(120, 175, 163, 0.849);
+  background-color: #206d77 ;
 }
 
 .usercontainer {
   padding: 10px 16px;
   margin: 0px 0;
   border-bottom: 1px solid #fafafa;
-  background-color: rgba(120, 175, 163, 0.849);
+  background-color: #206d77 ;
   border-bottom: 2px solid #0bc989;
 }
 .usercontainer:hover {
@@ -63,7 +63,7 @@
   padding: 1px 1px;
   margin: 0px 0;
   border-bottom: 1px solid #fafafa;
-  background-color: rgba(120, 175, 163, 0.849);
+  background-color: #206d77 ;
 }
 .gamecontainer:hover {
   box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
@@ -136,9 +136,15 @@
 
 /* On mouse-over, add a deeper shadow */
 .card:hover {
+  box-shadow: 0 18px 36px 0 rgb(255, 0, 0);
+  border: #3542f1;
+  border-radius: 24px;
+}
+
+.card:focus {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  border: #f1356d;
-  border-radius: 4px;
+  border: #3542f1;
+  border-radius: 24px;
 }
 
 /* Add some padding inside the card container */
@@ -149,7 +155,7 @@
 .grid-container {
   display: grid;
   grid-template-columns: auto auto auto auto auto;
-  background-color: #2196F3;
+  background-color: #206d77 ;
   padding: 10px;
 }
 .grid-item {
@@ -158,4 +164,23 @@
   padding: 20px;
   font-size: 30px;
   text-align: center;
+}
+
+.scorecontainer {
+  padding: 10px 16px;
+  margin: 0px 0;
+  border-bottom: 1px solid #fafafa;
+  background-color: #8b257d83 ;
+  border-bottom: 2px solid #0bc989;
+}
+.scorecontainer:hover {
+  box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
+}
+.scorecontainer h2{
+  font-size: 20px;
+  color: #f1356d;
+  margin-bottom: 8px;
+}
+.scorecontainer a{
+  text-decoration: none;
 }

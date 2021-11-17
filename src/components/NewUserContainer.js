@@ -51,17 +51,20 @@ function NewUserContainer({allAvatars}){
     return(
         <div className="usercontainer">
             
-            <h1>User Container</h1>
+            {/* <h1>User Container</h1> */}
             <h3>Select Your User:</h3>
             <Form>
-                <Form.Field><label>Name</label><input type = "text" placeholder="username" name="name" value={formData.name} onChange={handleFormChange}/>
+                <Form.Field><input type = "text" placeholder="username" name="name" value={formData.name} onChange={handleFormChange}/>
                 </Form.Field>
-                <Button onClick= {submitUser}>Submit</Button>
-            </Form>
+               
+            
             <h3>Select Your Avatar:</h3>
             <Card.Group itemsPerRow={5}>
                 {allAvatars.map(avatar => <AvatarCard avatar={avatar} key={avatar.id} handleImageClick={handleImageClick}/>)}
             </Card.Group>
+            <br /><center>
+            <Button size="huge" onClick= {submitUser}>Submit</Button></center>
+            </Form>
         </div>
     )
 }
