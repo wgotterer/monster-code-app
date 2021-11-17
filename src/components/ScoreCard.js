@@ -5,11 +5,11 @@ import { Button, Form, Card, Icon, Image } from "semantic-ui-react";
 
     const [userMonsters, setUserMonsters] = useState(monsterList.filter((monster) => {
         return (
-            monster.id <= user.level_id
+            monster.id <= user.level_id 
         )
     }))
 
-    console.log(userMonsters)
+    console.log(user, userMonsters)
 
         // for (let i = 0; i < user.level_id; i++) {
         //     setUserMonsters([monsterList[i], ...userMonsters]) 

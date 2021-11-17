@@ -21,7 +21,7 @@ function NewUserContainer({allAvatars}){
         const newUser = {
             name: formData.name,
             avatar_id: avatarId,
-            level_id: 1
+            level_id: 0
         };
         console.log(newUser)
         fetch("http://localhost:9292/users", {
