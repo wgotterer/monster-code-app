@@ -11,17 +11,21 @@ function NewUserContainer({allAvatars}){
     const [userInfo, setUserInfo] = useState({})
     const [formData, setFormData] = useState({
         name: "",
-        avatar_id: "",
-        level_id: 1
+        // avatar_id: "",
+        // level_id: 1
     })
     const [avatarId, setAvatarId] = useState(0)
 
     const submitUser = (e) => {
+        if(avatarId===0 || !formData.name){
+            alert("please type a name and choose an avatar below!")
+            return;
+        }
         e.preventDefault()
         const newUser = {
             name: formData.name,
             avatar_id: avatarId,
-            level_id: 1
+            level_id: 0
         };
         console.log(newUser)
         fetch("http://localhost:9292/users", {
