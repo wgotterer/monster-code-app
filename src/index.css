@@ -199,3 +199,18 @@
    transform: translateY(30%);
    transform: translateX(465%);
 }
+
+.loginbutton{
+  padding: 6px 20px;
+  text-align: center;
+  background-color: rgba(154, 182, 175, 0.849);
+  color: rgb(247, 247, 247);
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  position:relative;
+   top: 50%;
+   transform: translateY(30%);
+   transform: translateX(300%);
+}

@@ -1,8 +1,10 @@
 import React, {useEffect, useState} from 'react'
 import ScoreCard from './ScoreCard';
+import { useHistory } from "react-router-dom";
 
 function ScorePage() {
 
+    let history = useHistory();
     const [userList, setUserList] = useState()
     const [monsterList, setMonsterList] = useState()
 
@@ -20,12 +22,17 @@ function ScorePage() {
 
     console.log(monsterList)
 
+    function handleLoginPage(){
+        history.push("/login")
+    }
+
 
     return userList && monsterList ?
      (
         <div className="scorecontainer">
             <h1>HIGH SCORES</h1>
             {userList.map((user)=><ScoreCard monsterList={monsterList} user={user}/>)}
+            <button className="loginbutton" onClick={handleLoginPage}>Take Me To The Login Page!</button>
         </div>
     )
     : "Loading"
