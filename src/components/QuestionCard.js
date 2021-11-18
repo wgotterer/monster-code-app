@@ -24,6 +24,8 @@ function QuestionCard({level, monster, user, updateLevel}) {
         else if(answerToLower === level["questions"][questionNum]["answer"]){
             setQuestionNum(questionNum + 1)
             // console.log(questionNum)
+        }else {
+            alert(`hint: First letter start with... ${level["questions"][questionNum]["answer"].charAt(0)}`)
         }
         setFormData("")
     }
