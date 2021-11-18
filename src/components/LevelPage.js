@@ -65,13 +65,19 @@ function LevelPage() {
         }
     }
 
+    function handleQuitGame(){
+        history.push("/score")
+    }
+
 
     return user && level && monster?
         (
         <div className="gamecontainer">
             <h2>{level["name"]}</h2>
             <QuestionCard level={level} monster={monster} user={user} updateLevel={updateLevel}/>
-
+            <div >
+            <button className="quitbutton"  onClick={handleQuitGame}>Get Me Outta Here!</button>
+            </div>
         </div>
         ) : "Loading"
 }

@@ -8,14 +8,20 @@ function QuestionCard({level, monster, user, updateLevel}) {
     const squareUrl = "http://jahprovides.xyz/wp-content/uploads/2021/11/square.png"
     const boompow = "http://jahprovides.xyz/wp-content/uploads/2021/11/boompow.png"
 
+   
+
     const handleSubmit = (e) => {
         e.preventDefault()
-        console.log(formData)
-        if(questionNum === 2 && formData === level["questions"][questionNum]["answer"]){
+        // console.log(formData)
+        const answerToLower = formData.toLowerCase()
+        console.log(answerToLower)
+        console.log(level["questions"][questionNum]["answer"])
+        console.log(questionNum)
+        if(questionNum === 2 && answerToLower === level["questions"][questionNum]["answer"]){
             updateLevel()
             setQuestionNum(0)
         }
-        else if(formData === level["questions"][questionNum]["answer"]){
+        else if(answerToLower === level["questions"][questionNum]["answer"]){
             setQuestionNum(questionNum + 1)
             // console.log(questionNum)
         }
